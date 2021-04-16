@@ -1,0 +1,24 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 0 0;
+  width: 100%;
+}
+
+.row__album {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.row__title {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.row__title:hover {
+  color: #cccccc;
+}
+/*# sourceMappingURL=row.css.map */

@@ -1,0 +1,7 @@
+@import "../../utils";
+.signUp {
+  padding: 2rem;
+  @include flex(flex, center, column, center);
+  @include positionAbsolute(absolute, 50%, 50%, translate(-50%, -50%));
+  @include signUp-SingIn ();
+}

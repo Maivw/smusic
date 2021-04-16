@@ -1,0 +1,63 @@
+.navbar {
+  width: 15rem;
+  height: 100%;
+  z-index: 2;
+  background-image: linear-gradient(167deg, #6bbeff, #3415ec);
+}
+
+.navbar__icon {
+  padding-right: 0.5rem;
+}
+
+.navbar__img {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+  object-fit: contain;
+  border-radius: 0.3rem;
+}
+
+.navbar__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.navbar__logo:hover {
+  background-color: #e8e8e8;
+  color: #131313;
+  transition: all 0.25s linear;
+}
+
+.navbar__name {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.navbar__name:hover {
+  color: #131313;
+}
+
+ul {
+  font-size: 1rem;
+}
+
+ul > li {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+ul > li:hover {
+  background-color: #e8e8e8;
+  color: #131313;
+  transition: all 0.25s linear;
+  border-radius: 0.3rem;
+}
+/*# sourceMappingURL=navbar.css.map */

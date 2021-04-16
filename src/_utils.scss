@@ -1,0 +1,104 @@
+$greyDark: #040404;
+$greyLight: #131313;
+$greyLighter:#e8e8e8;
+$mainTextColor: #fff;
+$secondTextColor: #cccccc;
+$boxShadowColor: #27C6E9;
+@mixin bigButton {
+  width: 15rem;
+  height: 3rem;
+  background-image: linear-gradient(37deg, rgb(32, 218, 233),rgb(40, 21, 236));
+  border-radius: 1.5rem;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 5px 0 $boxShadowColor;
+  &:hover {
+    background-image: linear-gradient(0deg, rgba(26, 228, 244, 0.15) 0%,rgba(50, 206, 35, 0.15) 100%),linear-gradient(90deg, rgb(44, 56, 250),rgb(88, 219, 228));
+    transition: all 0.25s linear;
+    color: $secondTextColor
+  }
+}
+@mixin positionAbsolute($position, $top, $left,$tranform) {
+  position: $position;
+  top:$top;
+  left: $left;
+  transform : $tranform;
+}
+@mixin flex( $flex, $alignItem, $direction, $justifyContent) {
+  display: $flex;
+  align-items: $alignItem;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+}
+
+$background-image: radial-gradient(circle at 85% 1%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244));
+
+
+@mixin signUp-SingIn {
+  border-radius: 1.5rem;
+  z-index: 2;
+  box-shadow: 0 0 10px 0 $boxShadowColor;
+  min-width: 25rem;
+  color: $mainTextColor;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+    transition: all 0.25s linear;
+  }
+  &__logo {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.3rem;
+  }
+  &__title {
+    font-size: 2rem;
+    color: $mainTextColor;
+    text-align: center;
+    padding: 2rem;
+  }
+  &__form {
+    opacity: 0.7;
+    border-radius: 0.3rem;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 25rem;
+    height: 30rem;
+  }
+
+  &__Innerform {
+    @include flex(flex, center, column, center);
+    margin: 0 auto;
+    width: 100%;
+    width: 22rem;
+    color: $mainTextColor;
+  }
+  &__input {
+    width: 100%;
+    padding: 0.5rem;
+    height: 3rem;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    margin-bottom: 2rem;
+
+  }
+  &__button {
+    @include bigButton();
+    border:0;
+    font-size: 1rem;
+    color: $mainTextColor
+  }
+
+  &__toSignUp, &__link {
+    font-size: 0.8rem;
+    color: $mainTextColor;
+    text-decoration: none;
+    margin: 2rem 0.5rem;
+    text-align: center;
+  }
+  
+}

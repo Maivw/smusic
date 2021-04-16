@@ -1,0 +1,22 @@
+.header {
+  height: 3rem;
+  z-index: 1;
+  width: calc(100vw - 15rem);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__link:hover {
+  color: #e8e8e8;
+  transition: all 0.25s linear;
+}
+/*# sourceMappingURL=header.css.map */
