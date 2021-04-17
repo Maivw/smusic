@@ -1,0 +1,64 @@
+.albumFooter {
+  background-image: linear-gradient(45deg, rgba(130, 89, 219, 0.2), rgba(44, 192, 226, 0.2), rgba(182, 103, 181, 0.2)), linear-gradient(135deg, #271495, #4152b9, #5b90dc);
+  box-shadow: 0 0 10px 0 #27C6E9;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.albumFooter:hover {
+  color: #cccccc !important;
+}
+
+.albumFooter__blue {
+  color: #27C6E9;
+}
+
+.albumFooter__blue:hover {
+  color: #cccccc;
+}
+
+.albumFooter__left {
+  flex: 0.3;
+  display: flex;
+  padding: 1.5rem;
+  justify-content: space-between;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.albumFooter__left-img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.3rem;
+  margin-left: 2rem;
+  object-fit: contain;
+  margin-top: -0.5rem;
+}
+
+.albumFooter__midle {
+  flex: 0.4;
+  display: flex;
+  padding: 1.5rem;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 20rem;
+}
+
+.albumFooter__right {
+  display: flex;
+  padding: 1.5rem;
+  justify-content: space-between;
+  flex: 0.3;
+}
+
+.albumFooter__songDetail {
+  font-size: 0.8rem;
+  padding-left: 1rem;
+}
+
+.albumFooter__songDetail > h4 {
+  margin-bottom: 0.5rem;
+}
+/*# sourceMappingURL=albumFooter.css.map */

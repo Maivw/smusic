@@ -1,0 +1,52 @@
+.albumBody {
+  margin-top: 2rem;
+  width: 85%;
+  height: fit-content;
+}
+
+.albumBody__icons {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.albumBody__info {
+  display: flex;
+  align-items: center;
+}
+
+.albumBody__infoText {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 300;
+  flex: 1;
+}
+
+.albumBody__infoText > h2 {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.albumBody__infoText > strong, .albumBody__infoText > p {
+  padding: 0.5rem 1rem;
+}
+
+.albumBody__img {
+  width: 23rem;
+  border-radius: 0.3rem;
+  margin: 1rem;
+  opacity: 0.7;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.albumBody__playlist {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.albumBody__songs {
+  height: auto;
+}
+/*# sourceMappingURL=albumBody.css.map */

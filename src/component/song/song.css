@@ -1,0 +1,31 @@
+.song {
+  height: auto;
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+}
+
+.song:hover {
+  background-color: #cccccc;
+  border-radius: 0.3rem;
+  color: #131313;
+  transition: all 0.25s linear;
+}
+
+.song__img {
+  width: 5rem;
+  height: 4rem;
+  border-radius: 0.3rem;
+  margin: 0 2rem;
+}
+
+.song__detail {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.song__detail > p {
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+}
+/*# sourceMappingURL=song.css.map */
