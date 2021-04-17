@@ -1,0 +1,27 @@
+@import  "../../utils";
+.song {
+  height: auto;
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  &:hover {
+    background-color: $secondTextColor;
+    border-radius: 0.3rem;
+    color:  $greyLight;
+    transition: all 0.25s linear;
+  }
+  &__img {
+    width: 5rem;
+    height: 4rem;
+    border-radius: 0.3rem;
+    margin: 0 2rem;
+  }
+  &__detail {
+    font-size: 0.8rem;
+    font-weight: 300;
+    & > p {
+      font-size: 0.6rem;
+      margin-top: 0.5rem;
+    }
+  }
+}

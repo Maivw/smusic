@@ -1,0 +1,51 @@
+@import "../../utils";
+.albumFooter {
+  background-image: linear-gradient(45deg, rgba(130, 89, 219, 0.2),rgba(44, 192, 226, 0.2),rgba(182, 103, 181, 0.2)),linear-gradient(135deg, rgb(39, 20, 149),rgb(65, 82, 185),rgb(91, 144, 220));
+  box-shadow: 0 0 10px 0 $boxShadowColor;
+  height: 5rem;
+  display: flex ;
+  justify-content: space-between;
+  color: $mainTextColor;
+  &:hover {
+    color: $secondTextColor !important;
+    
+  }
+  &__blue {
+    color: $boxShadowColor;
+    &:hover {
+      color: $secondTextColor;
+    }
+  }
+  &__left {
+    flex: 0.3;
+    @include footerFragtion ();
+    flex-direction: row;
+    justify-content: flex-start;
+    &-img {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 0.3rem;
+      margin-left: 2rem;
+      object-fit: contain;
+      margin-top: -0.5rem;
+    }
+  }
+  &__midle {
+    flex: 0.4;
+    @include footerFragtion ();
+    text-align: center;
+    max-width: 20rem;
+    
+  }
+  &__right {
+    @include footerFragtion ();
+    flex: 0.3 ;
+  }
+  &__songDetail {
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    & > h4 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

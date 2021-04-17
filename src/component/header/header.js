@@ -5,6 +5,8 @@ import "./header.css";
 import { signOut } from "../../action/index";
 import { useSelector, useDispatch } from "react-redux";
 import { auth } from "../../firebase";
+import SearchIcon from "@material-ui/icons/Search";
+import Avatar from "@material-ui/core/Avatar";
 
 function Header() {
 	const dispatch = useDispatch();
@@ -17,11 +19,21 @@ function Header() {
 		<div className="header">
 			{user ? (
 				<div className="header">
-					<Link to="/signin" className="header__link">
-						<div className="header__button" onClick={logOut}>
-							Sign out
+					<div className="header__left">
+						<input placeholder="Search for Artists, Songs" />
+						<SearchIcon className="header__left-icon" />
+					</div>
+					<div className="header__right">
+						<div className="header__right-user">
+							<Avatar src="" alt="user" />
+							<h4>{user.email}</h4>
 						</div>
-					</Link>
+						<Link to="/signin" className="header__link">
+							<div className="header__button" onClick={logOut}>
+								Sign out
+							</div>
+						</Link>
+					</div>
 				</div>
 			) : (
 				<Link to="/signin" className="header__link">
