@@ -2,17 +2,20 @@ import React from "react";
 import "./navbar.css";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
+import { Link } from "react-router-dom";
 
 function Navbar() {
 	return (
 		<div className="navbar">
 			<div className="navbar__logo">
-				<img
-					className="navbar__img"
-					src="https://toppng.com/uploads/preview/laystation-plus-logo-png-playstation-music-logo-11563034356unzjif5eni.png"
-					alt="logo"
-				/>
-				<div className="navbar__name">Smusic</div>
+				<Link to="/home" className="navbar__link">
+					<img
+						className="navbar__img"
+						src="https://toppng.com/uploads/preview/laystation-plus-logo-png-playstation-music-logo-11563034356unzjif5eni.png"
+						alt="logo"
+					/>
+					<div className="navbar__name">Smusic</div>
+				</Link>
 			</div>
 			<ul>
 				<li>

@@ -17,7 +17,11 @@
   border-radius: 0.3rem;
 }
 
-.navbar__logo {
+.navbar__link {
+  text-decoration: none;
+}
+
+.navbar__logo, .navbar__link {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,7 +30,7 @@
   padding: 0.5rem 0;
 }
 
-.navbar__logo:hover {
+.navbar__logo:hover, .navbar__link:hover {
   background-color: #e8e8e8;
   color: #131313;
   transition: all 0.25s linear;
