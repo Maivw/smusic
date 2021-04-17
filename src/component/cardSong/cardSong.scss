@@ -30,6 +30,11 @@
     transition: all 0.25s linear;
     transform: scale(1.2);
   }
+  &__link {
+    text-decoration: none;
+    color: $mainTextColor;
+    font-weight: 300;
+  }
   &__title {
     text-align: center;
     margin-top: 2rem;
