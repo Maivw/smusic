@@ -20,7 +20,9 @@ function Navbar() {
 			</div>
 			<ul>
 				<li>
-					<HomeIcon className="navbar__icon" /> Home
+					<Link to="/home" className="navbar__linkback">
+						<HomeIcon className="navbar__icon" /> Home
+					</Link>
 				</li>
 				<li>
 					<SearchIcon className="navbar__icon" /> Search

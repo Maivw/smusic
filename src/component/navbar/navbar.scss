@@ -40,7 +40,18 @@
     }
   }
 }
-ul {
+.navbar__linkback {
+  text-decoration: none;
+  color: $mainTextColor;
+  &:hover {
+    background-color: $greyLighter;
+    color: $greyLight;
+    transition: all 0.25s linear;
+    border-radius: 0.3rem;
+    
+  }
+}
+ ul {
   font-size: 1rem;
   font-weight: 300;
   > li {

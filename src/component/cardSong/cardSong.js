@@ -3,9 +3,8 @@ import "./cardSong.css";
 import { Link } from "react-router-dom";
 
 function CardSong({ album }) {
-	console.log("aaa", album);
 	return (
-		<Link to="/album/:1" className="cardSong__link">
+		<Link to={`/album/${album.id}`} className="cardSong__link">
 			<div>
 				<div className="cardSong">
 					<div className="cardSong__imgWrapper">

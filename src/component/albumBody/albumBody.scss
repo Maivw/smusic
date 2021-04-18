@@ -28,6 +28,8 @@
  }
   &__img {
     width: 23rem;
+    height: 15rem;
+    object-fit: cover;
     border-radius: 0.3rem;
     margin: 1rem;
     opacity: 0.7;

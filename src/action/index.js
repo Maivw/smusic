@@ -6,6 +6,7 @@ import {
 	REMOVE_FROM_FAVORITE,
 	REMOVE_ALBUM_FROM_FAVORITE,
 	MARK_FAVORITE_ALBUM,
+	GET_ALBUM,
 } from "./type";
 export const signIn = (userId) => {
 	return {
@@ -50,5 +51,11 @@ export const unMarkFavAlbum = (album) => {
 	return {
 		type: REMOVE_ALBUM_FROM_FAVORITE,
 		payload: album,
+	};
+};
+export const getAlbum = (id) => {
+	return {
+		type: GET_ALBUM,
+		payload: id,
 	};
 };

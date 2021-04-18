@@ -3,16 +3,28 @@ import {
 	REMOVE_FROM_FAVORITE,
 	MARK_FAVORITE_ALBUM,
 	REMOVE_ALBUM_FROM_FAVORITE,
+	GET_ALBUM,
 } from "../action/type";
+import { vietnameseAlbums, foreignAlbums, album } from "../data/songs";
 
 const INITIAL_STATE = {
+	albums: [...vietnameseAlbums, ...foreignAlbums],
 	albumsFav: [],
 	songsFav: [],
 	currentSong: null,
+	currentAlbum: null,
 };
 
 export default (state = INITIAL_STATE, action) => {
 	switch (action.type) {
+		case GET_ALBUM:
+			console.log("action", action.payload);
+			const album = state.albums.filter((al) => al.id === action.payload.id);
+			console.log("ffff", album);
+			return {
+				...state,
+				currentAlbum: album,
+			};
 		case MARK_FAVORITE:
 			const i = state.songsFav.findIndex(
 				(item) => item.id === action.payload.id
@@ -27,7 +39,6 @@ export default (state = INITIAL_STATE, action) => {
 				songsFav: [...newFav],
 			};
 		case MARK_FAVORITE_ALBUM:
-			console.log("action", action);
 			const k = state.albumsFav.findIndex(
 				(item) => item.id === action.payload.id
 			);
