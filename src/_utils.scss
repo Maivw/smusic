@@ -14,6 +14,7 @@ $boxShadowColor: #27C6E9;
   display: flex;
   justify-content: center;
   box-shadow: 0 0 5px 0 $boxShadowColor;
+  cursor: pointer;
   &:hover {
     background-image: linear-gradient(0deg, rgba(26, 228, 244, 0.15) 0%,rgba(50, 206, 35, 0.15) 100%),linear-gradient(90deg, rgb(44, 56, 250),rgb(88, 219, 228));
     transition: all 0.25s linear;

@@ -4,6 +4,8 @@ import {
 	SIGN_UP,
 	MARK_FAVORITE,
 	REMOVE_FROM_FAVORITE,
+	REMOVE_ALBUM_FROM_FAVORITE,
+	MARK_FAVORITE_ALBUM,
 } from "./type";
 export const signIn = (userId) => {
 	return {
@@ -24,16 +26,29 @@ export const signOut = () => {
 		type: SIGN_OUT,
 	};
 };
-export const markFav = (movie) => {
+export const markFav = (song) => {
 	return {
 		type: MARK_FAVORITE,
-		payload: movie,
+		payload: song,
 	};
 };
 
-export const unMarkFav = (movie) => {
+export const unMarkFav = (song) => {
 	return {
 		type: REMOVE_FROM_FAVORITE,
-		payload: movie,
+		payload: song,
+	};
+};
+export const markFavAlbum = (album) => {
+	return {
+		type: MARK_FAVORITE_ALBUM,
+		payload: album,
+	};
+};
+
+export const unMarkFavAlbum = (album) => {
+	return {
+		type: REMOVE_ALBUM_FROM_FAVORITE,
+		payload: album,
 	};
 };

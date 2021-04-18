@@ -2,6 +2,7 @@ import React from "react";
 import "./navbar.css";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
+import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -23,6 +24,9 @@ function Navbar() {
 				</li>
 				<li>
 					<SearchIcon className="navbar__icon" /> Search
+				</li>
+				<li>
+					<LibraryMusicIcon className="navbar__icon" /> Your Library
 				</li>
 			</ul>
 		</div>

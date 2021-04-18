@@ -10,6 +10,7 @@ import VolumeDownIcon from "@material-ui/icons/VolumeDown";
 import Slider from "@material-ui/core/Slider";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import ReactPlayer from "react-player";
 const useStyles = makeStyles({
 	root: {
 		width: "18rem",
@@ -59,7 +60,7 @@ function AlbumFooter() {
 				/>
 			</div>
 			<div className="albumFooter__right">
-				<Grid container spacing={2}>
+				{/* <Grid container spacing={2}>
 					<Grid item>
 						<PlaylistPlayIcon style={{ cursor: "pointer" }} />
 					</Grid>
@@ -73,7 +74,15 @@ function AlbumFooter() {
 							aria-labelledby="continuous-slider"
 						/>
 					</Grid>
-				</Grid>
+				</Grid> */}
+				<div className="player-wrapper">
+					<ReactPlayer
+						className="react-player"
+						url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+						width="100%"
+						height="100%"
+					/>
+				</div>
 			</div>
 		</div>
 	);
