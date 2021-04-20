@@ -1,6 +1,6 @@
 .albumFooter {
-  background-image: linear-gradient(45deg, rgba(130, 89, 219, 0.2), rgba(44, 192, 226, 0.2), rgba(182, 103, 181, 0.2)), linear-gradient(135deg, #271495, #4152b9, #5b90dc);
-  box-shadow: 0 0 10px 0 #27C6E9;
+  background-color: #040404;
+  box-shadow: 0 0 10px 0 #2c2c2c;
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,7 @@
 }
 
 .albumFooter__blue {
-  color: #27C6E9;
+  color: #2c2c2c;
 }
 
 .albumFooter__blue:hover {
@@ -54,11 +54,12 @@
 }
 
 .albumFooter__songDetail {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   padding-left: 1rem;
 }
 
 .albumFooter__songDetail > h4 {
+  font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
 /*# sourceMappingURL=albumFooter.css.map */

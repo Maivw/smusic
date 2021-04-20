@@ -54,6 +54,7 @@ export const unMarkFavAlbum = (album) => {
 	};
 };
 export const getAlbum = (id) => {
+	debugger;
 	return {
 		type: GET_ALBUM,
 		payload: id,

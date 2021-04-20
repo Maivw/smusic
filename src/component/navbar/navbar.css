@@ -2,7 +2,7 @@
   width: 15rem;
   height: 100%;
   z-index: 2;
-  background-image: linear-gradient(167deg, #6bbeff, #3415ec);
+  background: #040404;
 }
 
 .navbar__icon {

@@ -16,6 +16,12 @@ function Home() {
 					<Row title="Vietnamese songs" albums={vietnameseAlbums} />
 					<Row title="Foreign songs" albums={foreignAlbums} />
 				</div>
+				<div className="home__right">
+					<div className="home__right-rows">
+						<Row title="Vietnamese songs" albums={vietnameseAlbums} />
+						<Row title="Foreign songs" albums={foreignAlbums} />
+					</div>
+				</div>
 			</div>
 			{/* <div className="home__musicController">hahahha</div> */}
 		</div>

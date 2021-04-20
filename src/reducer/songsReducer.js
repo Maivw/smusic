@@ -19,8 +19,8 @@ export default (state = INITIAL_STATE, action) => {
 	switch (action.type) {
 		case GET_ALBUM:
 			console.log("action", action.payload);
+			debugger;
 			const album = state.albums.filter((al) => al.id === action.payload.id);
-			console.log("ffff", album);
 			return {
 				...state,
 				currentAlbum: album,

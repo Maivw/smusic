@@ -38,7 +38,7 @@ function SignUp() {
 				</Link>
 			</div>
 			<div className="signUp__form">
-				<div className="signUp__title">Sign In</div>
+				<div className="signUp__title">Sign Up</div>
 				<div className="signUp__Innerform">
 					<input
 						placeholder="Email address"

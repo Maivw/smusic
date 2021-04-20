@@ -17,7 +17,16 @@ const useStyles = makeStyles({
 	},
 });
 
-function AlbumFooter() {
+function AlbumFooter({ album }) {
+	console.log("dddd", album);
+	const curSongToPlay = album.songs[0];
+	console.log("bbbbbb", curSongToPlay.uri);
+	const currentSongIndex = curSongToPlay.id;
+	const nextSongIndex = currentSongIndex + 1;
+	const preSongIndex =
+		currentSongIndex === 1
+			? album.songs[album.songs.length - 1].id
+			: currentSongIndex - 1;
 	const classes = useStyles();
 	const [value, setValue] = React.useState(30);
 
@@ -29,15 +38,17 @@ function AlbumFooter() {
 			<div className="albumFooter__left">
 				<img
 					className="albumFooter__left-img"
-					src="https://res.cloudinary.com/maivw/image/upload/v1616095330/hoahaiduong_xf1xiu.jpg"
+					src={curSongToPlay.songImgUri}
 					alt="image album"
 				/>
 				<div className="albumFooter__songDetail">
-					<h4>No song </h4>
-					<p>Blue</p>
+					<h4>
+						{curSongToPlay.name} - {curSongToPlay.artist}
+					</h4>
+					<p>Likes : {curSongToPlay.numberOfLikes}</p>
 				</div>
 			</div>
-			<div className="albumFooter__midle">
+			{/* <div className="albumFooter__midle">
 				<ShuffleIcon
 					className="albumFooter__blue"
 					style={{ cursor: "pointer" }}
@@ -74,12 +85,17 @@ function AlbumFooter() {
 							aria-labelledby="continuous-slider"
 						/>
 					</Grid>
-				</Grid> */}
-				<div className="player-wrapper">
-					<audio></audio>
-					<p>Playing now</p>
-				</div>
-			</div>
+				</Grid> 
+
+			
+			</div> */}
+			<ReactPlayer
+				url={curSongToPlay.uri}
+				width="400px"
+				height="50px"
+				playing={false}
+				controls={true}
+			/>
 		</div>
 	);
 }

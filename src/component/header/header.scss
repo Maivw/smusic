@@ -12,7 +12,6 @@
   &__left {
     position: relative;
     flex: 0.4;
-    background-image: linear-gradient(45deg, rgba(130, 89, 219, 0.2),rgba(44, 192, 226, 0.2),rgba(182, 103, 181, 0.2)),linear-gradient(135deg, rgb(39, 20, 149),rgb(65, 82, 185),rgb(91, 144, 220));
     color: $mainTextColor;
     border-radius: 1.5rem;
     &-icon {
@@ -20,10 +19,10 @@
     }
     & > input {
       height: 100%;
-      background-image: linear-gradient(45deg, rgba(130, 89, 219, 0.2),rgba(44, 192, 226, 0.2),rgba(182, 103, 181, 0.2)),linear-gradient(135deg, rgb(39, 20, 149),rgb(65, 82, 185),rgb(91, 144, 220));
+      background-color: $greyLighter2;
       border: none;
       width: 100%;
-      @include positionAbsolute(absolute, 0, 0, translate(0, 0));
+      @include positionAbsolute(absolute, 0, 10%, translate(0, 0));
       border-radius: 1.5rem;
       padding-left: 1.5rem;
       outline: none;

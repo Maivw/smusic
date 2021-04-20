@@ -9,9 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 function Album(props) {
 	const { id } = props.match.params;
-	console.log("idddd", id);
+	const albums = useSelector((state) => state.songs.albums);
 	const currentAlbum = useSelector((state) => state.songs.currentAlbum);
-	console.log("ccccc", currentAlbum);
+	console.log(" Album", albums);
+	console.log("current", currentAlbum);
 	const dispatch = useDispatch();
 	useEffect(() => {
 		dispatch(getAlbum(id));
@@ -28,7 +29,7 @@ function Album(props) {
 			</div>
 
 			<div className="album__footer">
-				<AlbumFooter />
+				<AlbumFooter album={currentAlbum} />
 			</div>
 		</div>
 	);
