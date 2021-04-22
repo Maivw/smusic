@@ -23,7 +23,6 @@ function Home() {
 					</div>
 				</div>
 			</div>
-			{/* <div className="home__musicController">hahahha</div> */}
 		</div>
 	);
 }

@@ -24,16 +24,4 @@
   display: flex;
   flex-direction: column;
 }
-
-.home__musicController {
-  position: absolute;
-  bottom: 0;
-  height: 5rem;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #cccccc;
-}
 /*# sourceMappingURL=home.css.map */

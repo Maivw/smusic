@@ -10,16 +10,18 @@
   display: flex;
   justify-content: space-evenly;
   &__left {
+    height: 3rem;
     position: relative;
     flex: 0.4;
     color: $mainTextColor;
     border-radius: 1.5rem;
     &-icon {
       @include positionAbsolute(absolute, 30%, 97%, translate(-50%, 0));
+      z-index: 1;
     }
     & > input {
       height: 100%;
-      background-color: red;
+      background-color: $greyLighter2;
       border: none;
       width: 100%;
       @include positionAbsolute(absolute, 0, 10%, translate(0, 0));
@@ -27,10 +29,22 @@
       padding-left: 1.5rem;
       outline: none;
       color: $mainTextColor;
-      z-index: 10;
     }
   }
+  &__link {
+    text-decoration: none;
+    color: $mainTextColor;
+    &:hover {
+      color: $greyLighter;
+      transition: all 0.25s linear;
+    }
+  }
+  &__login {
+    @include positionAbsolute(absolute, 10, 90%, transition(0, -10%));
+  
+  }
   &__right {
+    height: 3rem;
     display: flex;
     align-items: center;
     flex: 0.5;
@@ -46,12 +60,5 @@
       }
     }
   }
-  &__link {
-    text-decoration: none;
-    color: $mainTextColor;
-    &:hover {
-      color: $greyLighter;
-      transition: all 0.25s linear;
-    }
-  }
+  
 }

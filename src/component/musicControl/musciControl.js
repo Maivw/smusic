@@ -2,31 +2,19 @@ import React, { useState } from "react";
 import "./musicControl.css";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
-import ShuffleIcon from "@material-ui/icons/Shuffle";
-import RepeatIcon from "@material-ui/icons/Repeat";
-import { makeStyles } from "@material-ui/core/styles";
 import ReactPlayer from "react-player";
-import { useSelector, useDispatch } from "react-redux";
-import AudioPlayer from "react-modular-audio-player";
+import { useDispatch } from "react-redux";
 import { setCurSong } from "../../action/index";
 
 function MusicControl({ album, curSongToPlay }) {
 	const dispatch = useDispatch();
-	const i = album?.songs.find((song) => song.id === curSongToPlay.id);
-	console.log("iiii", i);
-	// if (album?.songs.find(song => song.id === curSongToPlay.id))
-	const listSongs = curSongToPlay
-		? [curSongToPlay, ...album?.songs]
-		: [...album?.songs];
-	console.log("list", listSongs);
 	const getPreviousSong = (id) => {
-		console.log("id", id);
 		const preSongIndex = id - 1 === 0 ? album.songs.length - 1 : id - 2;
 		dispatch(setCurSong(album?.songs[preSongIndex]));
 	};
 	const getNextSong = (id) => {
 		const nextSongIndex = id - 1 === album.songs.length - 1 ? 0 : id;
-		dispatch(setCurSong(album.songs[nextSongIndex]));
+		dispatch(setCurSong(album?.songs[nextSongIndex]));
 	};
 	return (
 		<div>

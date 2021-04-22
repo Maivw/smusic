@@ -20,8 +20,8 @@ function Header() {
 			{user ? (
 				<div className="header">
 					<div className="header__left">
-						<input placeholder="Search for Artists, Songs" />
 						<SearchIcon className="header__left-icon" />
+						<input placeholder="Search for Artists, Songs" autoComplete="off" />
 					</div>
 					<div className="header__right">
 						<div className="header__right-user">
@@ -37,7 +37,9 @@ function Header() {
 				</div>
 			) : (
 				<Link to="/signin" className="header__link">
-					<div className="header__button">Sign In</div>
+					<div className="header__login">
+						<div className="header__button">Sign In</div>
+					</div>
 				</Link>
 			)}
 		</div>
