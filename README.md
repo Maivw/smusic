@@ -17,7 +17,7 @@ This project is a simplified front end clone of music player app. It was created
 #### Core Features
 * Login, logout and create a new account. 
 * Access to the list of songs/albums.
-* Add, remove movie from the wished list.
+* Add, remove songs from the wished list.
 ## Technical Overview
 
 I focused on the following considerations: 
