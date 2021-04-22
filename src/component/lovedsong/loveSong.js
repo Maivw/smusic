@@ -11,7 +11,6 @@ function LoveSong() {
 	const dispatch = useDispatch();
 	const lovedSongs = useSelector((state) => state.songs.songsFav);
 	const loveAlbum = { songs: [...lovedSongs] };
-	console.log("love", loveAlbum);
 
 	const onRemoveLovedList = (song) => {
 		dispatch(unMarkFav(song));

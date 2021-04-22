@@ -45,16 +45,14 @@
   }
   &__right {
     height: 3rem;
-    display: flex;
-    align-items: center;
+    @include flexAlignCenter();
     flex: 0.5;
     color: $secondTextColor;
     justify-content: flex-end;
     &-user {
       font-size: 0.8rem;
       margin-right: 5rem;
-      display: flex;
-      align-items: center;
+      @include flexAlignCenter();
       & > h4 {
         margin-left: 0.5rem;
       }

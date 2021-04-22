@@ -34,6 +34,10 @@ $boxShadowColor: #2c2c2c;
   flex-direction: $direction;
   justify-content: $justifyContent;
 }
+@mixin flexAlignCenter {
+  display: flex;
+  align-items: center;;
+}
 @mixin  footerFragtion {
   display: flex;
   padding: 1.5rem;

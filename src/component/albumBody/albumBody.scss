@@ -4,13 +4,11 @@
   width: 95%;
   height: fit-content;
   &__icons {
-    display: flex;
-    align-items: center;
+    @include flexAlignCenter();
     padding: 1rem;
   }
   &__info{
-    display: flex;
-    align-items: center;
+    @include flexAlignCenter();
   }
  &__inforMusicControl {
    font-size: 1rem;
