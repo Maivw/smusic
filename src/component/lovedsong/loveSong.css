@@ -5,12 +5,12 @@
 
 .container__body-left {
   grid-area: sidebar;
-  height: 100vh;
+  height: 100%;
 }
 
 .container__body-right {
   grid-area: body;
-  height: 100vh;
+  height: 100%;
 }
 
 .container {
@@ -79,5 +79,11 @@
 
 .container__body-right {
   margin-right: 4rem;
+}
+
+.container__body-left {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 /*# sourceMappingURL=loveSong.css.map */

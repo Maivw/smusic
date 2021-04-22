@@ -13,10 +13,6 @@ function Home() {
 				<Sidebar />
 			</div>
 			<div className="container__body-right">
-				<div className="home__right-rows">
-					<Row title="Vietnamese songs" albums={vietnameseAlbums} />
-					<Row title="Foreign songs" albums={foreignAlbums} />
-				</div>
 				<div className="home__right">
 					<div className="home__right-rows">
 						<Row title="Vietnamese songs" albums={vietnameseAlbums} key={1} />

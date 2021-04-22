@@ -18,6 +18,7 @@ function AlbumBody({ album }) {
 	};
 	const currentAlbum = useSelector((state) => state.songs.currentAlbum);
 	const curSongToPlay = useSelector((state) => state.songs.currentSong);
+
 	return (
 		<div className="albumBody">
 			<div className="albumBody__info">
