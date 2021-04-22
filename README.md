@@ -6,7 +6,7 @@
 </p>
 
 
-#### Table of Contents - [NETFLIX](#NEXFLIX)
+#### Table of Contents
   - [Table of Contents](#table-of-contents)
   - [Non-Technical Overview](#non-technical-overview)
   - [Core Features:](#core-features)
