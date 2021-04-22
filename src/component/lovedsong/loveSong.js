@@ -10,7 +10,7 @@ import MusicControl from "../musicControl/musciControl";
 function LoveSong() {
 	const dispatch = useDispatch();
 	const lovedSongs = useSelector((state) => state.songs.songsFav);
-	const loveAlbum = [...lovedSongs];
+	const loveAlbum = { songs: [...lovedSongs] };
 	console.log("love", loveAlbum);
 
 	const onRemoveLovedList = (song) => {
