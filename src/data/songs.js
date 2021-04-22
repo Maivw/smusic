@@ -1,52 +1,3 @@
-export const album = {
-	id: 1,
-	title: "Hoa hải đường",
-	imageUri:
-		"https://res.cloudinary.com/maivw/image/upload/v1616095330/hoahaiduong_xf1xiu.jpg",
-	artistHeadline: "J97",
-	songs: [
-		{
-			id: 1,
-			name: "Hoa Hai Duong",
-			songImgUri:
-				"https://res.cloudinary.com/maivw/image/upload/v1616193428/hoahaiduong-song_fbpt2s.jpg",
-			numberOfLikes: "10000000",
-			uri:
-				"https://spotifyc.s3.amazonaws.com/pop/Jack/yt1s.com+-+Jack++Hoa+H%E1%BA%A3i+%C4%90%C6%B0%E1%BB%9Dng++Official+Music+Video.mp3",
-			artist: "J97",
-		},
-		{
-			id: 2,
-			name: "Hong Nhan",
-			songImgUri:
-				"https://res.cloudinary.com/maivw/image/upload/v1616193661/hongnhansong_s4pwsa.jpg",
-			numberOfLikes: "14600000",
-			uri:
-				"https://spotifyc.s3.amazonaws.com/pop/Jack/yt1s.com+-+JACK++H%E1%BB%92NG+NHAN+OFFICIAL+MV++G5R.mp3",
-			artist: "J97",
-		},
-		{
-			id: 3,
-			name: "Bac Phan",
-			songImgUri:
-				"https://res.cloudinary.com/maivw/image/upload/v1616193659/bacphansong_vel8wu.jpg",
-			numberOfLikes: "100468900",
-			uri:
-				"https://spotifyc.s3.amazonaws.com/pop/Jack/yt1s.com+-+B%E1%BA%A0C+PH%E1%BA%ACN++KICM+ft+JACK++OFFICIAL+MV.mp3",
-			artist: "J97",
-		},
-		{
-			id: 4,
-			name: "Song Gio",
-			songImgUri:
-				"https://res.cloudinary.com/maivw/image/upload/v1616193655/songgiosong_u7rp8p.jpg",
-			numberOfLikes: "20989000",
-			uri:
-				"https://spotifyc.s3.amazonaws.com/pop/Jack/yt1s.com+-+S%C3%93NG+GI%C3%93++KICM+x+JACK++OFFICIAL+MUSIC+VIDEO.mp3",
-			artist: "J97",
-		},
-	],
-};
 export const vietnameseAlbums = [
 	{
 		id: 1,
@@ -385,8 +336,7 @@ export const foreignAlbums = [
 	{
 		id: 5,
 		title: "Best party songs",
-		imageUri:
-			"http://www.latestsongsnews.com/wp-content/uploads/2016/01/top-new-dance-party-songs-music-best-hits.jpg",
+		imageUri: "https://m.media-amazon.com/images/I/811v+F5PEHL._SS500_.jpg",
 		artistHeadline: "Dua Lipa, Luis Fonsi, J Balvin",
 		songs: [
 			{

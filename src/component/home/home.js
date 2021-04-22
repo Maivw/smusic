@@ -18,8 +18,8 @@ function Home() {
 				</div>
 				<div className="home__right">
 					<div className="home__right-rows">
-						<Row title="Vietnamese songs" albums={vietnameseAlbums} />
-						<Row title="Foreign songs" albums={foreignAlbums} />
+						<Row title="Vietnamese songs" albums={vietnameseAlbums} key={1} />
+						<Row title="Foreign songs" albums={foreignAlbums} key={2} />
 					</div>
 				</div>
 			</div>

@@ -7,6 +7,7 @@ import {
 	REMOVE_ALBUM_FROM_FAVORITE,
 	MARK_FAVORITE_ALBUM,
 	GET_ALBUM,
+	SET_CUR_SONG,
 } from "./type";
 export const signIn = (userId) => {
 	return {
@@ -54,9 +55,14 @@ export const unMarkFavAlbum = (album) => {
 	};
 };
 export const getAlbum = (id) => {
-	debugger;
 	return {
 		type: GET_ALBUM,
 		payload: id,
+	};
+};
+export const setCurSong = (song) => {
+	return {
+		type: SET_CUR_SONG,
+		payload: song,
 	};
 };

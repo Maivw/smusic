@@ -1,29 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./albumBody.css";
 import Song from "../song/song";
-// import { album } from "../../data/songs";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import { markFavAlbum } from "../../action/index";
-import { useDispatch } from "react-redux";
+import { markFavAlbum, setCurSong } from "../../action/index";
+import { useDispatch, useSelector } from "react-redux";
+import MusicControl from "../musicControl/musciControl";
 
 function AlbumBody({ album }) {
-	console.log("body", album);
 	const dispatch = useDispatch();
 	const addFavoriteAlbum = (album) => {
 		dispatch(markFavAlbum(album));
 	};
+	const setCurrentSongToPlay = (song) => {
+		dispatch(setCurSong(song));
+	};
+	const currentAlbum = useSelector((state) => state.songs.currentAlbum);
+	const curSongToPlay = useSelector((state) => state.songs.currentSong);
 	return (
 		<div className="albumBody">
 			<div className="albumBody__info">
 				<img src={album.imageUri} alt="image" className="albumBody__img" />
-				<div className="albumBody__infoText">
+				<div className="albumBody__inforMusicControl">
 					<h2>
 						{album.title} - {album.artistHeadline}
 					</h2>
-					<strong>PLAY LIST</strong>
-					<p className="albumBody__des">It's awsome</p>
+					<div className="albumBody__musicCOntrol">
+						<MusicControl album={currentAlbum} curSongToPlay={curSongToPlay} />
+					</div>
 				</div>
 			</div>
 			<div className="albumBody__songs">
@@ -40,11 +45,13 @@ function AlbumBody({ album }) {
 				<div className="albumBody__playlist">Play List</div>
 				{album?.songs?.map((song) => (
 					<Song
+						key={song.id}
 						song={song}
 						songImgUri={song.songImgUri}
 						numberOfLikes={song.numberOfLikes}
 						artist={song.artist}
 						name={song.name}
+						updateSong={() => setCurrentSongToPlay(song)}
 					/>
 				))}
 			</div>

@@ -1,12 +1,13 @@
 @import "../../utils";
-.albumFooter {
+.musicControl{
+  width: 100%;
+  border-radius: 0.3rem;
   background-color: $greyDark;
   box-shadow: 0 0 10px 0 $boxShadowColor;
-  height: 5rem;
+  height: 6rem;
   display: flex ;
   justify-content: space-between;
   color: $mainTextColor;
-  // opacity: 0.7;
   &:hover {
     color: $secondTextColor !important;
     
@@ -18,7 +19,7 @@
     }
   }
   &__left {
-    flex: 0.3;
+    flex: 0.4;
     @include footerFragtion ();
     flex-direction: row;
     justify-content: flex-start;
@@ -34,14 +35,23 @@
   &__midle {
     flex: 0.4;
     @include footerFragtion ();
-    text-align: center;
-    max-width: 20rem;
-    
+    text-align: center; 
+    align-items: center;  
+  }
+  &__playerWrapper {
+    outline-color: transparent;
+  }
+
+  &__player {
+    z-index: 1;
+    outline: none !important;
+    box-shadow: 0 0 10px 0 $boxShadowColor;
+    border-radius: 1.5rem;
   }
   &__right {
-    @include footerFragtion ();
-    flex: 0.3 ;
+    flex: 0.3;
   }
+  
   &__songDetail {
     font-size: 0.6rem;
     padding-left: 1rem;
@@ -50,4 +60,7 @@
       margin-bottom: 0.5rem;
     }
   }
+}
+.audio-player {
+  cursor: pointer !important;
 }

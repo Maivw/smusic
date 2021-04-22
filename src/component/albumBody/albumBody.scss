@@ -12,11 +12,12 @@
     display: flex;
     align-items: center;
   }
- &__infoText {
+ &__inforMusicControl {
    font-size: 1rem;
    color: $mainTextColor;
    font-weight: 300;
    flex: 1;
+   margin-left: 2rem;;
   & > h2 {
     font-size: 2rem;
     padding: 1rem;
@@ -34,6 +35,9 @@
     margin: 1rem;
     opacity: 0.7;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  }
+  &__musicCOntrol{
+    width: 100%;
   }
   &__playlist {
     margin-left: 2rem;

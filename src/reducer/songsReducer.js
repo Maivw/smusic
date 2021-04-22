@@ -4,6 +4,7 @@ import {
 	MARK_FAVORITE_ALBUM,
 	REMOVE_ALBUM_FROM_FAVORITE,
 	GET_ALBUM,
+	SET_CUR_SONG,
 } from "../action/type";
 import { vietnameseAlbums, foreignAlbums, album } from "../data/songs";
 
@@ -11,19 +12,33 @@ const INITIAL_STATE = {
 	albums: [...vietnameseAlbums, ...foreignAlbums],
 	albumsFav: [],
 	songsFav: [],
-	currentSong: null,
+	currentSong: {
+		id: 2,
+		name: "Hong Nhan",
+		songImgUri:
+			"https://res.cloudinary.com/maivw/image/upload/v1616193661/hongnhansong_s4pwsa.jpg",
+		numberOfLikes: "14600000",
+		uri:
+			"https://res.cloudinary.com/maivw/video/upload/v1618864312/spotifyC/yt1s.com_-_JACK_HO%CC%82%CC%80NG_NHAN_OFFICIAL_MV_G5R_frcosi.mp3",
+		artist: "J97",
+	},
 	currentAlbum: null,
 };
 
 export default (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case GET_ALBUM:
-			console.log("action", action.payload);
-			debugger;
-			const album = state.albums.filter((al) => al.id === action.payload.id);
+		case SET_CUR_SONG:
 			return {
 				...state,
-				currentAlbum: album,
+				currentSong: action.payload,
+			};
+		case GET_ALBUM:
+			const currentAb = state.albums.find(
+				(al) => al.id.toString() === action.payload.toString()
+			);
+			return {
+				...state,
+				currentAlbum: currentAb,
 			};
 		case MARK_FAVORITE:
 			const i = state.songsFav.findIndex(
@@ -42,7 +57,6 @@ export default (state = INITIAL_STATE, action) => {
 			const k = state.albumsFav.findIndex(
 				(item) => item.id === action.payload.id
 			);
-			console.log("kkk", k);
 			let newFavAlbum = [...state.albumsFav];
 
 			if (k < 0) {

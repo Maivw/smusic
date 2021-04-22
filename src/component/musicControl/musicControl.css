@@ -1,26 +1,28 @@
-.albumFooter {
+.musicControl {
+  width: 100%;
+  border-radius: 0.3rem;
   background-color: #040404;
   box-shadow: 0 0 10px 0 #2c2c2c;
-  height: 5rem;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   color: #fff;
 }
 
-.albumFooter:hover {
+.musicControl:hover {
   color: #cccccc !important;
 }
 
-.albumFooter__blue {
+.musicControl__blue {
   color: #2c2c2c;
 }
 
-.albumFooter__blue:hover {
+.musicControl__blue:hover {
   color: #cccccc;
 }
 
-.albumFooter__left {
-  flex: 0.3;
+.musicControl__left {
+  flex: 0.4;
   display: flex;
   padding: 1.5rem;
   justify-content: space-between;
@@ -28,7 +30,7 @@
   justify-content: flex-start;
 }
 
-.albumFooter__left-img {
+.musicControl__left-img {
   height: 3rem;
   width: 3rem;
   border-radius: 0.3rem;
@@ -37,29 +39,41 @@
   margin-top: -0.5rem;
 }
 
-.albumFooter__midle {
+.musicControl__midle {
   flex: 0.4;
   display: flex;
   padding: 1.5rem;
   justify-content: space-between;
   text-align: center;
-  max-width: 20rem;
+  align-items: center;
 }
 
-.albumFooter__right {
-  display: flex;
-  padding: 1.5rem;
-  justify-content: space-between;
+.musicControl__playerWrapper {
+  outline-color: transparent;
+}
+
+.musicControl__player {
+  z-index: 1;
+  outline: none !important;
+  box-shadow: 0 0 10px 0 #2c2c2c;
+  border-radius: 1.5rem;
+}
+
+.musicControl__right {
   flex: 0.3;
 }
 
-.albumFooter__songDetail {
+.musicControl__songDetail {
   font-size: 0.6rem;
   padding-left: 1rem;
 }
 
-.albumFooter__songDetail > h4 {
+.musicControl__songDetail > h4 {
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
-/*# sourceMappingURL=albumFooter.css.map */
+
+.audio-player {
+  cursor: pointer !important;
+}
+/*# sourceMappingURL=musicControl.css.map */
