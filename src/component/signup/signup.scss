@@ -5,3 +5,8 @@
   @include positionAbsolute(absolute, 50%, 50%, translate(-50%, -50%));
   @include signUp-SingIn ();
 }
+.error {
+  font-size: 0.6rem;
+  color: red;
+  margin-bottom: 1rem;
+}

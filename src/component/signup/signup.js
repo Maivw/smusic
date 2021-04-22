@@ -4,8 +4,14 @@ import "./signup.css";
 import { auth } from "../../firebase";
 import { useDispatch } from "react-redux";
 import { signUp } from "../../action/index";
+import validate from "../formValidate/validateInfo";
+import useForm from "../formValidate/useForm";
 
-function SignUp() {
+function SignUp({ submitForm }) {
+	const { handleChange, handleSubmit, values, errors } = useForm(
+		submitForm,
+		validate
+	);
 	const dispatch = useDispatch();
 	const history = useHistory();
 	const [email, setEmail] = useState("");
@@ -44,24 +50,26 @@ function SignUp() {
 				<div className="signUp__Innerform">
 					<input
 						placeholder="Email address"
-						value={email}
+						value={values.email}
 						className="signUp__input"
 						autoComplete="off"
-						onChange={(e) => setEmail(e.target.value)}
+						name="email"
+						// onChange={(e) => setEmail(e.target.value)}
+						onChange={handleChange}
 					/>
+					{errors.email && <p className="error">{errors.email}</p>}
 					<input
 						type="password"
 						autoComplete="off"
 						placeholder="Password"
 						className="signUp__input"
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
+						value={values.password}
+						name="password"
+						// onChange={(e) => setPassword(e.target.value)}
+						onChange={handleChange}
 					/>
-					<div
-						type="submit"
-						className="signUp__button"
-						onClick={handleRegister}
-					>
+					{errors.password && <p className="error">{errors.password}</p>}
+					<div type="submit" className="signUp__button" onClick={handleSubmit}>
 						Sign Up
 					</div>
 				</div>
