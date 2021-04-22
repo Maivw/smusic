@@ -7,6 +7,7 @@ import { signIn } from "../../action/index";
 
 function Login() {
 	const dispatch = useDispatch();
+	const history = useHistory();
 	const [email, setEmail] = useState("demoUser@gmail.com");
 	const [password, setPassword] = useState("password");
 	const handleLogin = (e) => {
@@ -20,6 +21,7 @@ function Login() {
 						uid: userAuth.user.uid,
 					})
 				);
+				history.push("/home");
 			})
 			.catch((err) => alert(err));
 	};

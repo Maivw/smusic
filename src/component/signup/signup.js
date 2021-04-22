@@ -7,6 +7,7 @@ import { signUp } from "../../action/index";
 
 function SignUp() {
 	const dispatch = useDispatch();
+	const history = useHistory();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -22,6 +23,7 @@ function SignUp() {
 						uid: userAuth.user.uid,
 					})
 				);
+				history.push("/home");
 			})
 			.catch((err) => alert(err.message));
 	};
