@@ -19,7 +19,6 @@
     }
   }
   &__left {
-    flex: 0.4;
     @include footerFragtion ();
     flex-direction: row;
     justify-content: flex-start;
@@ -36,10 +35,11 @@
     flex: 0.4;
     @include footerFragtion ();
     text-align: center; 
-    align-items: center;  
+    align-items: center;
   }
   &__playerWrapper {
     outline-color: transparent;
+    padding: 0 0.5rem,
   }
 
   &__player {
@@ -48,9 +48,7 @@
     box-shadow: 0 0 10px 0 $boxShadowColor;
     border-radius: 1.5rem;
   }
-  &__right {
-    flex: 0.3;
-  }
+
   
   &__songDetail {
     font-size: 0.6rem;

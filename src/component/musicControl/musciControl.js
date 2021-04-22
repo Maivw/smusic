@@ -6,43 +6,27 @@ import ShuffleIcon from "@material-ui/icons/Shuffle";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import { makeStyles } from "@material-ui/core/styles";
 import ReactPlayer from "react-player";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import AudioPlayer from "react-modular-audio-player";
-const useStyles = makeStyles({
-	root: {
-		width: "18rem",
-	},
-});
+import { setCurSong } from "../../action/index";
 
 function MusicControl({ album, curSongToPlay }) {
-	const [curSong, setCurSongToPlay] = useState(
-		curSongToPlay || album?.songs[0]
-	);
-	const curIndex = 0;
-	let rearrangedPlayer = [
-		{
-			className: "",
-			innerComponents: [
-				{
-					type: "play",
-					style: {
-						width: "20rem",
-						justifyContent: "center",
-						filter: "invert(100%)",
-						opacity: "0.4",
-					},
-				},
-			],
-		},
-	];
-
+	const dispatch = useDispatch();
+	const i = album?.songs.find((song) => song.id === curSongToPlay.id);
+	console.log("iiii", i);
+	// if (album?.songs.find(song => song.id === curSongToPlay.id))
+	const listSongs = curSongToPlay
+		? [curSongToPlay, ...album?.songs]
+		: [...album?.songs];
+	console.log("list", listSongs);
 	const getPreviousSong = (id) => {
+		console.log("id", id);
 		const preSongIndex = id - 1 === 0 ? album.songs.length - 1 : id - 2;
-		setCurSongToPlay(album.songs[preSongIndex] || album?.songs[0]);
+		dispatch(setCurSong(album?.songs[preSongIndex]));
 	};
 	const getNextSong = (id) => {
 		const nextSongIndex = id - 1 === album.songs.length - 1 ? 0 : id;
-		setCurSongToPlay(album.songs[nextSongIndex]);
+		dispatch(setCurSong(album.songs[nextSongIndex]));
 	};
 	return (
 		<div>
@@ -68,18 +52,13 @@ function MusicControl({ album, curSongToPlay }) {
 							onClick={() => getPreviousSong(curSongToPlay.id)}
 						/>
 						<div className="musicControl__playerWrapper">
-							<AudioPlayer
-								style={{ cursor: "pointer" }}
-								audioFiles={[
-									{
-										src: `${curSongToPlay.uri}`,
-										title: `${curSongToPlay.name}`,
-										artist: `${curSongToPlay.artist}`,
-									},
-								]}
-								rearrange={rearrangedPlayer}
-								playerWidth="6rem"
-								iconSize="4rem"
+							<ReactPlayer
+								url={curSongToPlay.uri}
+								width="300px"
+								height="50px"
+								playing={false}
+								controls={true}
+								loop={true}
 							/>
 						</div>
 						<SkipNextIcon
