@@ -11,14 +11,14 @@
   border-radius: 40rem;
   z-index: 2;
   background-color: #111;
-  opacity: 0.3;
+  opacity: 0.5;
   box-shadow: 0 0 10px 0 #2c2c2c;
   width: 30rem;
   color: #fff;
 }
 
 .login:hover {
-  opacity: 0.7;
+  opacity: 1;
   transition: all 0.25s linear;
   width: 35rem;
 }
