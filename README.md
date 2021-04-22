@@ -2,7 +2,7 @@
 *Created by <a href="https://maivw.github.io/" target="_blank">Mai Van Wagner</a> - **<a target="_blank" href="https://smusick-c0ea7.web.app ">Live Site</a>***
 
 <p align="center">
-  <img src="https://github.com/Maivw/smusic/blob/master/recording.gif?raw=true" width=300/>
+  <img src="https://github.com/Maivw/smusic/blob/master/recording.gif?raw=true" width='100%'/>
 </p>
 
 
