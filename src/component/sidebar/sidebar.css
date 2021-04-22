@@ -1,15 +1,16 @@
-.navbar {
+.sidebar {
   width: 15rem;
   height: 100%;
   z-index: 2;
   background: #040404;
 }
 
-.navbar__icon {
+.sidebar__icon {
   padding-right: 0.5rem;
+  font-size: 2rem;
 }
 
-.navbar__img {
+.sidebar__img {
   width: 2rem;
   height: 2rem;
   margin-left: 1rem;
@@ -17,11 +18,11 @@
   border-radius: 0.3rem;
 }
 
-.navbar__link {
+.sidebar__link {
   text-decoration: none;
 }
 
-.navbar__logo, .navbar__link {
+.sidebar__logo, .sidebar__link {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -30,28 +31,29 @@
   padding: 0.5rem 0;
 }
 
-.navbar__logo:hover, .navbar__link:hover {
+.sidebar__logo:hover, .sidebar__link:hover {
   background-color: #e8e8e8;
   color: #131313;
   transition: all 0.25s linear;
 }
 
-.navbar__name {
+.sidebar__name {
   font-size: 1.8rem;
   color: #fff;
   margin-left: 1rem;
 }
 
-.navbar__name:hover {
+.sidebar__name:hover {
   color: #131313;
 }
 
-.navbar__linkback {
+.sidebar__linkback {
   text-decoration: none;
   color: #fff;
+  align-items: center;
 }
 
-.navbar__linkback:hover {
+.sidebar__linkback:hover {
   background-color: #e8e8e8;
   color: #131313;
   transition: all 0.25s linear;
@@ -77,4 +79,4 @@ ul > li:hover {
   transition: all 0.25s linear;
   border-radius: 0.3rem;
 }
-/*# sourceMappingURL=navbar.css.map */
+/*# sourceMappingURL=sidebar.css.map */

@@ -1,11 +1,12 @@
 @import "../../utils";
-.navbar {
+.sidebar {
   width: 15rem;
   height: 100%;
   z-index: 2;
   background: $greyDark;
   &__icon {
     padding-right: 0.5rem;
+    font-size: 2rem;
   }
   &__img {
     width: 2rem;
@@ -40,9 +41,10 @@
     }
   }
 }
-.navbar__linkback {
+.sidebar__linkback {
   text-decoration: none;
   color: $mainTextColor;
+  align-items: center;
   &:hover {
     background-color: $greyLighter;
     color: $greyLight;

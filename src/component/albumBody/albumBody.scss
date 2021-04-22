@@ -37,12 +37,13 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
   }
   &__musicCOntrol{
-    width: 100%;
+    width: 110%;
   }
   &__playlist {
     margin-left: 2rem;
     font-size: 1.5rem;
     font-weight: 300;
+    margin-bottom: 1rem;
     text-transform: uppercase;
   }
   &__songs {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../navbar/navbar";
+import Sidebar from "../sidebar/sidebar";
 import Header from "../header/header";
 import AlbumBody from "../albumBody/albumBody";
 import "./album.css";
@@ -16,13 +16,13 @@ function Album(props) {
 		dispatch(getAlbum(id));
 	}, [id]);
 	return (
-		<div className="album">
+		<div className="container">
 			<Header />
-			<div className="album__header"></div>
-			<div className="album__body-left">
-				<Navbar />
+			<div className="container__header"></div>
+			<div className="container__body-left">
+				<Sidebar />
 			</div>
-			<div className="album__body-right">
+			<div className="container__body-right">
 				{currentAlbum && <AlbumBody album={currentAlbum} />}
 			</div>
 		</div>

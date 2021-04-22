@@ -1,22 +1,23 @@
-.album__header {
+.container__header {
   grid-area: header;
   height: 5rem;
 }
 
-.album__body-left {
-  grid-area: navbar;
+.container__body-left {
+  grid-area: sidebar;
   height: 100vh;
 }
 
-.album__body-right {
+.container__body-right {
   grid-area: body;
   height: 100vh;
 }
 
-.album {
+.container {
+  min-height: 100% !important;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "navbar header header header header" "navbar body body body body";
+  grid-template-areas: "sidebar header header header header" "sidebar body body body body";
 }
 /*# sourceMappingURL=album.css.map */

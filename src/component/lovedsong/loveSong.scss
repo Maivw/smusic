@@ -1,0 +1,16 @@
+@import "../../utils";
+@include displayGrid();
+@include song();
+.loveSong__title {
+  padding: 2rem;
+  font-size: 2rem;
+}
+.loveSong__musicControl {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.container__body-right {
+  margin-right: 4rem;
+}

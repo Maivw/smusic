@@ -1,7 +1,24 @@
-.home__wrapper {
+.container__header {
+  grid-area: header;
+  height: 5rem;
+}
+
+.container__body-left {
+  grid-area: sidebar;
   height: 100vh;
-  width: 100vw;
-  display: flex;
+}
+
+.container__body-right {
+  grid-area: body;
+  height: 100vh;
+}
+
+.container {
+  min-height: 100% !important;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "sidebar header header header header" "sidebar body body body body";
 }
 
 .home {

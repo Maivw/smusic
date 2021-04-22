@@ -1,23 +1,2 @@
 @import "../../utils";
-.album__header {
-  grid-area: header;
-  height: 5rem;
-}
-
-.album__body-left {
-  grid-area: navbar;
-  height: 100vh;
-}
-.album__body-right {
-  grid-area: body;
-  height: 100vh;
-}
-
-.album {
-  display: grid;
-  grid-template-columns: repeat( 5, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "navbar header header header header"
-    "navbar body body body body"
-}
+@include displayGrid();

@@ -6,6 +6,7 @@ import Home from "./component/home/home";
 import Landing from "./component/landing/landing";
 import SignUp from "./component/signup/signup";
 import Album from "./component/album/album";
+import LoveSong from "./component/lovedsong/loveSong";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 					<Route path="/" exact={true} component={Landing} />
 					<Route path="/signup" exact={true} component={SignUp} />
 					<Route path="/album/:id" exact={true} component={Album} />
+					<Route path="/lovedSongs" exact={true} component={LoveSong} />
 				</Switch>
 			</BrowserRouter>
 		</div>

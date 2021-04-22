@@ -1,12 +1,10 @@
 import React from "react";
 import "./cardSong.css";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function CardSong({ album }) {
-	const history = useHistory();
 	const user = useSelector((state) => state.user.user);
-	console.log("user", user);
 	return (
 		<div>
 			{user ? (

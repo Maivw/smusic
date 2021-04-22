@@ -109,3 +109,71 @@ $background-image: linear-gradient(180deg, rgb(56, 55, 55),rgb(0, 0, 0));
   }
   
 }
+
+@mixin song {
+  .song {
+    cursor: pointer;
+    height: auto;
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:hover {
+      background-color: $secondTextColor;
+      border-radius: 0.3rem;
+      color:  $greyLight;
+      transition: all 0.25s linear;
+    }
+    &__icon {
+      margin-right: 2rem;
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+    &__img {
+      width: 5rem;
+      height: 4rem;
+      border-radius: 0.3rem;
+      margin: 0 2rem;
+    }
+    &__detail {
+      font-size: 0.8rem;
+      font-weight: 300;
+      min-width: 10rem;
+      align-items: center;
+      display: flex;
+      & > h4 > p {
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  
+}
+
+@mixin displayGrid(){
+  .container__header {
+    grid-area: header;
+    height: 5rem;
+  }
+  
+  .container__body-left {
+    grid-area: sidebar;
+    height: 100vh;
+  }
+  .container__body-right {
+    grid-area: body;
+    height: 100vh;
+  }
+  
+  .container{
+    min-height: 100% !important;
+    display: grid;
+    grid-template-columns: repeat( 5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "sidebar header header header header"
+      "sidebar body body body body"
+  }
+}
